@@ -1,0 +1,355 @@
+Course : CPS218 UNIX
+Professor: Dr. Shahab Hussain
+Semester:  Spring 2021
+Assignment: 4
+Student names (s):  Patrick Nelson
+Deadline: 04/04/2021
+
+
+Project 4-1
+
+Step 1:
+> vi testfile
+
+Step 2:
+> cat testfile
+This is line 1.
+This is line 2.
+This is line 3.
+This is line 4.
+
+Step 3:
+
+>vi commands
+
+Step 4:
+
+> cat commands
+2GddGp:x
+
+Step 5:
+
+> vi testfile < commands
+Vim: Warning: Input is not from a terminal
+
+Step 6:
+
+> cat testfile
+This is line 1.
+This is line 3.
+This is line 4.
+This is line 2.
+
+Project 4-2
+
+Step 1:
+
+> ls oops
+ls: cannot access 'oops': No such file or directory
+
+Step 2:
+
+> ls oops 2> errfile
+
+Step 3:
+
+> cat errfile
+ls: cannot access 'oops': No such file or directory
+
+Project 4-3
+
+Step 1:
+> >newfile1
+
+Step 2:
+
+> ls -l newfile1
+-rw-r--r-- 1 pat-nel87 users 2 Apr  4 14:12 newfile1
+
+Step 3:
+
+> > newfile2
+
+Project 4-4
+
+Step 1:
+
+> touch newfile3
+
+Step 2:
+
+> ls -l newfile3
+-rw-r--r-- 1 pat-nel87 users 0 Apr  4 14:16 newfile3
+
+Step 3:
+
+> touch newfile3
+
+Step 4:
+> ls -l newfile3
+-rw-r--r-- 1 pat-nel87 users 0 Apr  4 14:18 newfile3
+
+Project 4-5
+
+Step 1:
+
+> rm newfile1
+
+Step 2:
+> rm -i newfile2
+rm: remove regular file 'newfile2'? y
+
+Step 3:
+> touch file1 file2 file3 filegood filebad
+
+Step 4:
+> ls file*
+file1  file2  file3  filebad  filegood
+
+Step 5:
+> rm file*
+
+Step 6:
+> ls file*
+zsh: no matches found: file*
+
+Project 4-6:
+
+Step 1:
+
+> mkdir newdir
+
+Step 2:
+> touch newdir/newfile
+
+Step 3:
+> ls newdir
+newfile
+
+Step 4:
+
+> rmdir newdir
+rmdir: failed to remove 'newdir': Directory not empty
+
+Step 5:
+
+> rm newdir/newfile
+
+Step 6:
+> rmdir newdir
+
+Step 7:
+> ls
+commands  errfile  newfile3  testfile
+
+Step 8:
+
+> mkdir company
+
+Step 9:
+
+> mkdir company/sakes
+
+Step 10:
+
+> mkdir company/sales
+
+Step 11:
+
+> mkdir company/marketing
+
+Step 12:
+
+> mkdir company/accounting
+
+Step 13:
+
+> touch company/file1 company/file2 company/file3
+
+Step 14:
+
+> cp company/file1 company/file2 company/file3 company/sales
+
+Step 15:
+
+> cp company/file1 company/file2 company/file3 company/marketing
+
+Step 16:
+
+> cp company/file1 company/file2 company/file3 company/accounting
+
+Step 17:
+
+> ls
+commands  company  errfile  newfile3  testfile
+
+Step 18:
+
+> rm -r company
+
+Step 19:
+
+> ls
+commands  errfile  newfile3  testfile
+
+Project 4-7:
+
+Step 1:
+
+> mkdir source
+
+Step 2:
+
+> > file1
+
+Step 3:
+
+> > file2
+
+Step 4:
+
+> > file3
+
+Step 5:
+
+> cp file1 file2 file3 source
+
+Step 6:
+
+> cp file1 file1.bak
+
+Project 4-8
+
+Step 1:
+
+> > thisfile
+
+Step 2:
+
+> mv thisfile source
+
+Step 3:
+> ls
+commands  errfile  file1  file1.bak  file2  file3  newfile3  source  testfile
+
+Step 4:
+> ls source
+file1  file2  file3  thisfile
+
+Step 5:
+
+> mv file1 file1.bak source
+> > my_file
+
+Step 6:
+> mv my_file your_file
+
+Step 7:
+> ls
+commands  errfile  file2  file3  newfile3  source  testfile  your_file
+
+Project 4-9
+
+Step 1:
+
+> find /home -name file1
+
+Step 2:
+
+/home/pat-nel87/unixClass/hw4/source/file1
+
+Project 4-10:
+
+Step 1:
+
+> cat>product1
+
+Step 2:
+
+Lobby Furniture:1201
+Ballroom Specialties:1221
+Poolside Carts:1320
+Formal Dining Specials:1340
+Reservation Logs:1410
+
+Step 3:
+
+Ctrl-d
+
+Step 4:
+
+> cat>product2
+
+Step 5:
+
+Plumbing Supplies:1423
+Office Equipment:1361
+Carpeting Services:1395
+Auto Maintenace:1544
+Pianos and Violins:1416
+
+Step 6:
+
+Ctrl-d
+
+Step 7:
+
+> cat product1 product2>product3
+
+Step 8:
+> more product3
+Lobby Furniture:1201
+Ballroom Specialties:1221
+Poolside Carts:1320
+Formal Dining Specials:1340
+Reservation Logs:1410
+Plumbing Supplies:1423
+Office Equipment:1361
+Carpeting Services:1395
+Auto Maintenace:1544
+Pianos and Violins:1416
+
+Project 4-11
+
+Step 1:
+> clear
+
+Step 2:
+> paste product1 product2
+
+Lobby Furniture:1201    Plumbing Supplies:1423
+Ballroom Specialties:1221       Office Equipment:1361
+Poolside Carts:1320     Carpeting Services:1395
+Formal Dining Specials:1340     Auto Maintenace:1544
+Reservation Logs:1410   Pianos and Violins:1416
+
+Step 3:
+
+> paste product1 product2 >newlist
+
+Project 4-12
+
+Step 1:
+
+> vi corp_phones1
+
+Step 2:
+> vi corp_phones2
+
+Step 3:
+> cut -f4-6 -d: corp_phones1
+Harrison:Joel:M
+Mitchell:Barbara:C
+Olson:Timothy:H
+Moore:Sarah:H
+Polk:John:S
+
+Step 4:
+
+> cut -c14-25,26-35,36 corp_phones2
+Harrison Joel   M 4540 Ac
+Mitchell Barbara        C 4541
+Olson    Timothy        H 4544
+Moore    Sarah  H 4500
+Polk     John   S 4520 Ac
+

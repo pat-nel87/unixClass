@@ -1,0 +1,519 @@
+Course : CPS218 UNIX
+Professor: Dr. Shahab Hussain
+Semester:  Spring 2021
+Assignment: 2
+Student names (s):  Patrick Nelson
+Deadline: 02/21/2021
+
+
+Project 2-1
+
+Step 1: 
+
+pat-nel87@DESKTOP-CGAK0NJ:~> man mount
+Man: find all matching manual pages (set MAN_POSIXLY_CORRECT to avoid this)
+ * mount (8)
+   mount (2)
+Man: What manual page do you want?
+Man:
+
+MOUNT(8)                                        System Administration                                        MOUNT(8)
+
+NAME
+       mount - mount a filesystem
+
+SYNOPSIS
+       mount [-l|-h|-V]
+
+       mount -a [-fFnrsvw] [-t fstype] [-O optlist]
+
+       mount [-fnrsvw] [-o options] device|dir
+
+       mount [-fnrsvw] [-t fstype] [-o options] device dir
+
+DESCRIPTION
+       All  files  accessible  in a Unix system are arranged in one big tree, the file hierarchy, rooted at /.  These
+       files can be spread out over several devices.  The mount command serves to attach the filesystem found on some
+       device  to the big file tree.  Conversely, the umount(8) command will detach it again.  The filesystem is used
+       to control how data is stored on the device or provided in a virtual way by network or another services.
+
+       The standard form of the mount command is:
+
+              mount -t type device dir
+
+       This tells the kernel to attach the filesystem found on device (which is of type type) at the  directory  dir.
+       The  option  -t type is optional.  The mount command is usually able to detect a filesystem.  The root permis-
+       sions are necessary to mount a filesystem by default.  See  section  "Non-superuser  mounts"  below  for  more
+       details.   The  previous  contents  (if  any)  and owner and mode of dir become invisible, and as long as this
+       filesystem remains mounted, the pathname dir refers to the root of the filesystem on device.
+
+Step 2:
+  
+What kind of file systems can be mounted?
+
+File System Partitions & additional devices like CDROM or other removable storage
+
+Step 3:
+
+pat-nel87@DESKTOP-CGAK0NJ:~> mount
+
+/dev/sdb on / type ext4 (rw,relatime,discard,errors=remount-ro,data=ordered)
+none on /mnt/wsl type tmpfs (rw,relatime)
+tools on /init type 9p (ro,relatime,dirsync,aname=tools;fmask=022,loose,access=client,msize=65536,trans=fd,rfd=6,wfd=6)
+none on /dev type devtmpfs (rw,nosuid,relatime,size=1998172k,nr_inodes=499543,mode=755)
+sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,noatime)
+proc on /proc type proc (rw,nosuid,nodev,noexec,noatime)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,noatime,gid=5,mode=620,ptmxmode=000)
+none on /run type tmpfs (rw,nosuid,noexec,noatime,mode=755)
+none on /run/lock type tmpfs (rw,nosuid,nodev,noexec,noatime)
+none on /run/shm type tmpfs (rw,nosuid,nodev,noatime)
+none on /run/user type tmpfs (rw,nosuid,nodev,noexec,noatime,mode=755)
+binfmt_misc on /proc/sys/fs/binfmt_misc type binfmt_misc (rw,relatime)
+tmpfs on /sys/fs/cgroup type tmpfs (rw,nosuid,nodev,noexec,relatime,mode=755)
+cgroup2 on /sys/fs/cgroup/unified type cgroup2 (rw,nosuid,nodev,noexec,relatime,nsdelegate)
+cgroup on /sys/fs/cgroup/cpuset type cgroup (rw,nosuid,nodev,noexec,relatime,cpuset)
+cgroup on /sys/fs/cgroup/cpu type cgroup (rw,nosuid,nodev,noexec,relatime,cpu)
+cgroup on /sys/fs/cgroup/cpuacct type cgroup (rw,nosuid,nodev,noexec,relatime,cpuacct)
+cgroup on /sys/fs/cgroup/blkio type cgroup (rw,nosuid,nodev,noexec,relatime,blkio)
+cgroup on /sys/fs/cgroup/memory type cgroup (rw,nosuid,nodev,noexec,relatime,memory)
+cgroup on /sys/fs/cgroup/devices type cgroup (rw,nosuid,nodev,noexec,relatime,devices)
+cgroup on /sys/fs/cgroup/freezer type cgroup (rw,nosuid,nodev,noexec,relatime,freezer)
+cgroup on /sys/fs/cgroup/net_cls type cgroup (rw,nosuid,nodev,noexec,relatime,net_cls)
+cgroup on /sys/fs/cgroup/perf_event type cgroup (rw,nosuid,nodev,noexec,relatime,perf_event)
+cgroup on /sys/fs/cgroup/net_prio type cgroup (rw,nosuid,nodev,noexec,relatime,net_prio)
+cgroup on /sys/fs/cgroup/hugetlb type cgroup (rw,nosuid,nodev,noexec,relatime,hugetlb)
+cgroup on /sys/fs/cgroup/pids type cgroup (rw,nosuid,nodev,noexec,relatime,pids)
+cgroup on /sys/fs/cgroup/rdma type cgroup (rw,nosuid,nodev,noexec,relatime,rdma)
+drivers on /usr/lib/wsl/drivers type 9p (ro,nosuid,nodev,noatime,dirsync,aname=drivers;fmask=333;dmask=222,mmap,access=client,msize=65536,trans=fd,rfd=4,wfd=4)
+lib on /usr/lib/wsl/lib type 9p (ro,nosuid,nodev,noatime,dirsync,aname=lib;fmask=333;dmask=222,mmap,access=client,msize=65536,trans=fd,rfd=4,wfd=4)
+drvfs on /mnt/c type 9p (rw,noatime,dirsync,aname=drvfs;path=C:\;uid=1000;gid=100;symlinkroot=/mnt/,mmap,access=client,msize=262144,trans=virtio)
+drvfs on /mnt/d type 9p (rw,noatime,dirsync,aname=drvfs;path=D:\;uid=1000;gid=100;symlinkroot=/mnt/,mmap,access=client,msize=262144,trans=virtio)
+
+Project 2-4
+
+Step 1:
+
+pat-nel87@DESKTOP-CGAK0NJ:~> pwd
+/home/pat-nel87
+
+Step 2:
+
+/home/pat-nel87
+
+Project 2-5
+
+Step 1:
+
+pat-nel87@DESKTOP-CGAK0NJ:~> PS1='$PWD>'
+/home/pat-nel87>
+
+Step 2:
+
+/home/pat-nel87>cd /var/spool/mail
+/var/spool/mail>
+
+Step 3:
+
+/var/spool/mail>cd
+/home/pat-nel87>
+
+Step 4:
+
+CLOSED & RE OPENED TERMINAL
+
+Project 2-6
+
+Step 1:
+
+pat-nel87@DESKTOP-CGAK0NJ:~> cd
+
+Step 2:
+
+pat-nel87@DESKTOP-CGAK0NJ:~> cd /home
+pat-nel87@DESKTOP-CGAK0NJ:/home>
+
+Step 3:
+
+pat-nel87@DESKTOP-CGAK0NJ:/home> cd pat-nel87
+pat-nel87@DESKTOP-CGAK0NJ:~>
+
+Project 2-7
+
+Step 1:
+
+pat-nel87@DESKTOP-CGAK0NJ:~> cd
+pat-nel87@DESKTOP-CGAK0NJ:~>
+
+Step 2:
+
+pat-nel87@DESKTOP-CGAK0NJ:~> cd .
+pat-nel87@DESKTOP-CGAK0NJ:~>
+
+Step 3:
+
+pat-nel87@DESKTOP-CGAK0NJ:~> cd ..
+pat-nel87@DESKTOP-CGAK0NJ:/home>
+
+Step 4:
+
+pat-nel87@DESKTOP-CGAK0NJ:/home> cd ..
+pat-nel87@DESKTOP-CGAK0NJ:/>
+
+Project 2-8
+
+Step 1:
+
+pat-nel87@DESKTOP-CGAK0NJ:/> ls
+bin   dev  home  lib    lost+found  opt   root  sbin     srv  tmp  var
+boot  etc  init  lib64  mnt         proc  run   selinux  sys  usr
+
+
+pat-nel87@DESKTOP-CGAK0NJ:/> cd
+pat-nel87@DESKTOP-CGAK0NJ:~>
+
+Step 2:
+
+pat-nel87@DESKTOP-CGAK0NJ:~> touch notes.txt
+pat-nel87@DESKTOP-CGAK0NJ:~> ls notes.txt
+notes.txt
+
+Step 3:
+
+pat-nel87@DESKTOP-CGAK0NJ:~> ls /var
+adm  cache  crash  games  lib  lock  log  mail  opt  run  spool  tmp
+
+Step 4:
+
+pat-nel87@DESKTOP-CGAK0NJ:~> ls -l /dev
+total 0
+crw-r--r-- 1 root root  10, 235 Feb 11 10:54 autofs
+drwxr-xr-x 2 root root       40 Feb 11 10:54 block
+drwxr-xr-x 2 root root       80 Feb 11 10:54 bsg
+crw------- 1 root root  10, 234 Feb 11 10:54 btrfs-control
+crw------- 1 root root   5,   1 Feb 11 10:54 console
+crw------- 1 root root  10,  62 Feb 11 10:54 cpu_dma_latency
+crw------- 1 root root  10, 203 Feb 11 10:54 cuse
+crw-rw-rw- 1 root root 245,   0 Feb 11 10:54 dxg
+lrwxrwxrwx 1 root root       13 Feb 11 10:54 fd -> /proc/self/fd
+crw-rw-rw- 1 root root   1,   7 Feb 11 10:54 full
+crw-rw-rw- 1 root root  10, 229 Feb 11 10:54 fuse
+crw-r--r-- 1 root root   1,  11 Feb 11 10:54 kmsg
+crw------- 1 root root  10, 232 Feb 11 10:54 kvm
+brw------- 1 root root   7,   0 Feb 11 10:54 loop0
+brw------- 1 root root   7,   1 Feb 11 10:54 loop1
+brw------- 1 root root   7,   2 Feb 11 10:54 loop2
+brw------- 1 root root   7,   3 Feb 11 10:54 loop3
+brw------- 1 root root   7,   4 Feb 11 10:54 loop4
+brw------- 1 root root   7,   5 Feb 11 10:54 loop5
+brw------- 1 root root   7,   6 Feb 11 10:54 loop6
+brw------- 1 root root   7,   7 Feb 11 10:54 loop7
+crw------- 1 root root  10, 237 Feb 11 10:54 loop-control
+drwxr-xr-x 2 root root       60 Feb 11 10:54 mapper
+crw------- 1 root root   1,   1 Feb 11 10:54 mem
+crw------- 1 root root  10,  59 Feb 11 10:54 memory_bandwidth
+drwxr-xr-x 2 root root       60 Feb 11 10:54 net
+crw------- 1 root root  10,  61 Feb 11 10:54 network_latency
+crw------- 1 root root  10,  60 Feb 11 10:54 network_throughput
+crw-rw-rw- 1 root root   1,   3 Feb 11 10:54 null
+crw------- 1 root root  10, 144 Feb 11 10:54 nvram
+crw------- 1 root root 108,   0 Feb 11 10:54 ppp
+crw-rw-rw- 1 root root   5,   2 Feb 12 12:48 ptmx
+drwxr-xr-x 2 root root        0 Feb 11 10:54 pts
+brw------- 1 root root   1,   0 Feb 11 10:54 ram0
+brw------- 1 root root   1,   1 Feb 11 10:54 ram1
+brw------- 1 root root   1,  10 Feb 11 10:54 ram10
+brw------- 1 root root   1,  11 Feb 11 10:54 ram11
+brw------- 1 root root   1,  12 Feb 11 10:54 ram12
+brw------- 1 root root   1,  13 Feb 11 10:54 ram13
+brw------- 1 root root   1,  14 Feb 11 10:54 ram14
+brw------- 1 root root   1,  15 Feb 11 10:54 ram15
+brw------- 1 root root   1,   2 Feb 11 10:54 ram2
+brw------- 1 root root   1,   3 Feb 11 10:54 ram3
+brw------- 1 root root   1,   4 Feb 11 10:54 ram4
+brw------- 1 root root   1,   5 Feb 11 10:54 ram5
+brw------- 1 root root   1,   6 Feb 11 10:54 ram6
+brw------- 1 root root   1,   7 Feb 11 10:54 ram7
+brw------- 1 root root   1,   8 Feb 11 10:54 ram8
+brw------- 1 root root   1,   9 Feb 11 10:54 ram9
+crw-rw-rw- 1 root root   1,   8 Feb 11 10:54 random
+crw------- 1 root root 251,   0 Feb 11 10:54 rtc0
+brw------- 1 root root   8,   0 Feb 11 10:54 sda
+brw------- 1 root root   8,  16 Feb 11 10:54 sdb
+crw------- 1 root root  21,   0 Feb 11 10:54 sg0
+crw------- 1 root root  21,   1 Feb 11 10:54 sg1
+lrwxrwxrwx 1 root root        8 Feb 11 10:54 shm -> /run/shm
+lrwxrwxrwx 1 root root       15 Feb 11 10:54 stderr -> /proc/self/fd/2
+lrwxrwxrwx 1 root root       15 Feb 11 10:54 stdin -> /proc/self/fd/0
+lrwxrwxrwx 1 root root       15 Feb 11 10:54 stdout -> /proc/self/fd/1
+crw-rw-rw- 1 root root   5,   0 Feb 11 10:54 tty
+crw------- 1 root root   4,   0 Feb 11 10:54 tty0
+crw------- 1 root root   4,   1 Feb 11 10:54 tty1
+crw------- 1 root root   4,  10 Feb 11 10:54 tty10
+crw------- 1 root root   4,  11 Feb 11 10:54 tty11
+crw------- 1 root root   4,  12 Feb 11 10:54 tty12
+crw------- 1 root root   4,  13 Feb 11 10:54 tty13
+crw------- 1 root root   4,  14 Feb 11 10:54 tty14
+crw------- 1 root root   4,  15 Feb 11 10:54 tty15
+crw------- 1 root root   4,  16 Feb 11 10:54 tty16
+crw------- 1 root root   4,  17 Feb 11 10:54 tty17
+crw------- 1 root root   4,  18 Feb 11 10:54 tty18
+crw------- 1 root root   4,  19 Feb 11 10:54 tty19
+crw------- 1 root root   4,   2 Feb 11 10:54 tty2
+crw------- 1 root root   4,  20 Feb 11 10:54 tty20
+crw------- 1 root root   4,  21 Feb 11 10:54 tty21
+crw------- 1 root root   4,  22 Feb 11 10:54 tty22
+crw------- 1 root root   4,  23 Feb 11 10:54 tty23
+crw------- 1 root root   4,  24 Feb 11 10:54 tty24
+crw------- 1 root root   4,  25 Feb 11 10:54 tty25
+crw------- 1 root root   4,  26 Feb 11 10:54 tty26
+crw------- 1 root root   4,  27 Feb 11 10:54 tty27
+crw------- 1 root root   4,  28 Feb 11 10:54 tty28
+crw------- 1 root root   4,  29 Feb 11 10:54 tty29
+crw------- 1 root root   4,   3 Feb 11 10:54 tty3
+crw------- 1 root root   4,  30 Feb 11 10:54 tty30
+crw------- 1 root root   4,  31 Feb 11 10:54 tty31
+crw------- 1 root root   4,  32 Feb 11 10:54 tty32
+crw------- 1 root root   4,  33 Feb 11 10:54 tty33
+crw------- 1 root root   4,  34 Feb 11 10:54 tty34
+crw------- 1 root root   4,  35 Feb 11 10:54 tty35
+crw------- 1 root root   4,  36 Feb 11 10:54 tty36
+crw------- 1 root root   4,  37 Feb 11 10:54 tty37
+crw------- 1 root root   4,  38 Feb 11 10:54 tty38
+crw------- 1 root root   4,  39 Feb 11 10:54 tty39
+crw------- 1 root root   4,   4 Feb 11 10:54 tty4
+crw------- 1 root root   4,  40 Feb 11 10:54 tty40
+crw------- 1 root root   4,  41 Feb 11 10:54 tty41
+crw------- 1 root root   4,  42 Feb 11 10:54 tty42
+crw------- 1 root root   4,  43 Feb 11 10:54 tty43
+crw------- 1 root root   4,  44 Feb 11 10:54 tty44
+crw------- 1 root root   4,  45 Feb 11 10:54 tty45
+crw------- 1 root root   4,  46 Feb 11 10:54 tty46
+crw------- 1 root root   4,  47 Feb 11 10:54 tty47
+crw------- 1 root root   4,  48 Feb 11 10:54 tty48
+crw------- 1 root root   4,  49 Feb 11 10:54 tty49
+crw------- 1 root root   4,   5 Feb 11 10:54 tty5
+crw------- 1 root root   4,  50 Feb 11 10:54 tty50
+crw------- 1 root root   4,  51 Feb 11 10:54 tty51
+crw------- 1 root root   4,  52 Feb 11 10:54 tty52
+crw------- 1 root root   4,  53 Feb 11 10:54 tty53
+crw------- 1 root root   4,  54 Feb 11 10:54 tty54
+crw------- 1 root root   4,  55 Feb 11 10:54 tty55
+crw------- 1 root root   4,  56 Feb 11 10:54 tty56
+crw------- 1 root root   4,  57 Feb 11 10:54 tty57
+crw------- 1 root root   4,  58 Feb 11 10:54 tty58
+crw------- 1 root root   4,  59 Feb 11 10:54 tty59
+crw------- 1 root root   4,   6 Feb 11 10:54 tty6
+crw------- 1 root root   4,  60 Feb 11 10:54 tty60
+crw------- 1 root root   4,  61 Feb 11 10:54 tty61
+crw------- 1 root root   4,  62 Feb 11 10:54 tty62
+crw------- 1 root root   4,  63 Feb 11 10:54 tty63
+crw------- 1 root root   4,   7 Feb 11 10:54 tty7
+crw------- 1 root root   4,   8 Feb 11 10:54 tty8
+crw------- 1 root root   4,   9 Feb 11 10:54 tty9
+crw------- 1 root root   4,  64 Feb 11 10:54 ttyS0
+crw------- 1 root root   4,  65 Feb 11 10:54 ttyS1
+crw------- 1 root root   4,  66 Feb 11 10:54 ttyS2
+crw------- 1 root root   4,  67 Feb 11 10:54 ttyS3
+crw-rw-rw- 1 root root   1,   9 Feb 11 10:54 urandom
+crw------- 1 root root   7,   0 Feb 11 10:54 vcs
+crw------- 1 root root   7,   1 Feb 11 10:54 vcs1
+crw------- 1 root root   7, 128 Feb 11 10:54 vcsa
+crw------- 1 root root   7, 129 Feb 11 10:54 vcsa1
+crw------- 1 root root   7,  64 Feb 11 10:54 vcsu
+crw------- 1 root root   7,  65 Feb 11 10:54 vcsu1
+drwxr-xr-x 2 root root       60 Feb 11 10:54 vfio
+crw------- 1 root root  10, 238 Feb 11 10:54 vhost-net
+crw------- 1 root root  10,  63 Feb 11 10:54 vsock
+crw-rw-rw- 1 root root   1,   5 Feb 11 10:54 zero
+
+Step 5:
+
+pat-nel87@DESKTOP-CGAK0NJ:~> ls -l /
+total 1304
+drwxr-xr-x   2 root root    4096 Feb  4 10:20 bin
+drwxr-xr-x   2 root root    4096 Mar 11  2019 boot
+drwxr-xr-x   8 root root    2820 Feb 11 10:54 dev
+drwxr-xr-x  68 root root    4096 Feb 11 10:54 etc
+drwxr-xr-x   3 root root    4096 Dec 14 12:37 home
+-rwxr-xr-x   2 root root 1256064 Jan 24 13:17 init
+drwxr-xr-x   5 root root    4096 May 23  2019 lib
+drwxr-xr-x   4 root root    4096 Dec 16 15:29 lib64
+drwx------   2 root root   16384 Apr 10  2019 lost+found
+drwxr-xr-x   5 root root    4096 Dec 14 12:37 mnt
+drwxr-xr-x   2 root root    4096 Mar 11  2019 opt
+dr-xr-xr-x 118 root root       0 Feb 11 10:54 proc
+drwx------   4 root root    4096 May 23  2019 root
+drwxr-xr-x   6 root root     120 Feb 11 10:54 run
+drwxr-xr-x   2 root root    4096 Dec 14 12:37 sbin
+drwxr-xr-x   2 root root    4096 Mar 11  2019 selinux
+drwxr-xr-x   3 root root    4096 May 23  2019 srv
+dr-xr-xr-x  11 root root       0 Feb 11 10:54 sys
+drwxrwxrwt   2 root root    4096 Dec 16 15:21 tmp
+drwxr-xr-x  12 root root    4096 Dec 14 12:45 usr
+drwxr-xr-x  11 root root    4096 May 23  2019 var
+
+Step 6:
+
+pat-nel87@DESKTOP-CGAK0NJ:~> clear
+
+Step 7:
+
+pat-nel87@DESKTOP-CGAK0NJ:~> ls -a
+.   .aws    .bash_history  bin     .config  .emacs       .fonts      .inputrc  notes.txt  .viminfo    .zsh_history
+..  .azure  .bashrc        .cache  .docker  example-app  .gnu-emacs  .local    .profile   .zcompdump
+
+
+Project 2-9
+
+Step 1:
+
+pat-nel87@DESKTOP-CGAK0NJ:~/unixClass> cat > first_name
+Patrick
+pat-nel87@DESKTOP-CGAK0NJ:~/unixClass> cat > middle_name
+David
+pat-nel87@DESKTOP-CGAK0NJ:~/unixClass> cat > last_name
+Nelson
+pat-nel87@DESKTOP-CGAK0NJ:~/unixClass> cat > full_name1.txt
+Patrick David Nelson
+pat-nel87@DESKTOP-CGAK0NJ:~/unixClass> cat > full_name22.txt
+Patrick David Nelson
+pat-nel87@DESKTOP-CGAK0NJ:~/unixClass>
+
+Step 2:
+
+pat-nel87@DESKTOP-CGAK0NJ:~/unixClass> ls *name
+first_name  last_name  middle_name
+
+Step 3:
+
+pat-nel87@DESKTOP-CGAK0NJ:~/unixClass> ls full_name?.txt
+full_name1.txt
+
+Step 4:
+
+pat-nel87@DESKTOP-CGAK0NJ:~/unixClass> ls *.txt
+full_name1.txt  full_name22.txt
+
+Project 2-10
+
+Step 1:
+
+pat-nel87@DESKTOP-CGAK0NJ:~/unixClass> mkdir dept_4540
+
+Step 2:
+
+pat-nel87@DESKTOP-CGAK0NJ:~/unixClass> ls
+dept_4540  first_name  full_name1.txt  full_name22.txt  last_name  middle_name
+
+Step 3:
+
+pat-nel87@DESKTOP-CGAK0NJ:~/unixClass> cd dept_4540
+pat-nel87@DESKTOP-CGAK0NJ:~/unixClass/dept_4540>
+
+Step 4:
+
+pat-nel87@DESKTOP-CGAK0NJ:~/unixClass/dept_4540> cat > phones1
+219:432:4567:Harrison:Joel
+219:432:4587:Mitchell:Barbara
+219:432:4589:Olson:Timothy
+
+Step 5:
+
+pat-nel87@DESKTOP-CGAK0NJ:~/unixClass/dept_4540> cat phones1
+219:432:4567:Harrison:Joel
+219:432:4587:Mitchell:Barbara
+219:432:4589:Olson:Timothy
+
+Step 6:
+
+pat-nel87@DESKTOP-CGAK0NJ:~/unixClass> mkdir dept_4550
+
+Step 7:
+
+pat-nel87@DESKTOP-CGAK0NJ:~/unixClass> ls
+dept_4540  dept_4550  first_name  full_name1.txt  full_name22.txt  last_name  middle_name
+
+Step 8:
+
+pat-nel87@DESKTOP-CGAK0NJ:~/unixClass> cd dept_4550
+
+Step 9:
+
+pat-nel87@DESKTOP-CGAK0NJ:~/unixClass/dept_4550> cat > phones2
+219:432:4591:Moore:Sarah
+219:432:4522:Polk:John
+219:432:4501:Robinson:Lisa
+
+Step 10:
+
+pat-nel87@DESKTOP-CGAK0NJ:~/unixClass/dept_4550> cat phones2
+219:432:4591:Moore:Sarah
+219:432:4522:Polk:John
+219:432:4501:Robinson:Lisa
+
+Step 11:
+
+pat-nel87@DESKTOP-CGAK0NJ:~/unixClass/dept_4550> clear
+
+Project 2-11
+
+Step 1:
+
+pat-nel87@DESKTOP-CGAK0NJ:~/unixClass> mkdir corp_db
+
+Step 2:
+
+pat-nel87@DESKTOP-CGAK0NJ:~/unixClass> cd corp_db
+
+Step 3:
+
+pat-nel87@DESKTOP-CGAK0NJ:~/unixClass/corp_db> cp ~/unixClass/dept_4540/phones1 .
+
+Step 4:
+
+pat-nel87@DESKTOP-CGAK0NJ:~/unixClass/corp_db> cp ~/unixClass/dept_4550/phones2 .
+
+Step 5:
+
+pat-nel87@DESKTOP-CGAK0NJ:~/unixClass/corp_db> ls
+phones1  phones2
+
+Step 6:
+
+pat-nel87@DESKTOP-CGAK0NJ:~/unixClass/corp_db> cat phones1 phones2 > corp_phones
+
+Step 7:
+
+pat-nel87@DESKTOP-CGAK0NJ:~/unixClass/corp_db> more corp_phones
+219:432:4567:Harrison:Joel
+219:432:4587:Mitchell:Barbara
+219:432:4589:Olson:Timothy
+219:432:4591:Moore:Sarah
+219:432:4522:Polk:John
+219:432:4501:Robinson:Lisa
+
+Project 2-12
+
+Step 1:
+
+pat-nel87@DESKTOP-CGAK0NJ:~> chmod go+x ~
+
+Step 2:
+
+pat-nel87@DESKTOP-CGAK0NJ:~> chmod ugo+x ~/unixClass/corp_db
+
+Step 3:
+
+pat-nel87@DESKTOP-CGAK0NJ:~> chmod o+w ~/unixClass/corp_db/*
+
+Step 4:
+
+pat-nel87@DESKTOP-CGAK0NJ:~> ls -l ~/unixClass/corp_db
+total 12
+-rw-r--rw- 1 pat-nel87 users 159 Feb 12 13:09 corp_phones
+-rw-r--rw- 1 pat-nel87 users  84 Feb 12 13:06 phones1
+-rw-r--rw- 1 pat-nel87 users  75 Feb 12 13:07 phones2
+pat-nel87@DESKTOP-CGAK0NJ:~>
+
+
+

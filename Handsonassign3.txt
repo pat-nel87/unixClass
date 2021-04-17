@@ -1,0 +1,308 @@
+Course : CPS218 UNIX
+Professor: Dr. Shahab Hussain
+Semester:  Spring 2021
+Assignment: 3
+Student names (s):  Patrick Nelson
+Deadline: 03/07/2021
+
+Project 3-1
+
+Step 1:
+
+$ vi textfiles
+
+
+
+Project 3-2
+
+Step 1:
+
+Type i
+
+Step 2:
+
+Press esc, back in command mode
+
+Step 3:
+
+Press i, back in insert mode
+
+Step 4:
+
+Typed,
+Files contain text.
+
+Text contains lines.
+
+Lines contain characters.
+
+Characters form words.
+
+Words form text.
+
+Project 3-3:
+
+Step 1:
+
+Pressed esc
+
+Step 2:
+
+Pressed (.), last block of text was repeated.
+
+Project 3-4:
+
+Step 1:
+
+Pressed esc, back in command mode
+
+Step 2:
+
+Used arrow keys
+
+Step 3:
+
+Typed Capital H to move the cursor to the upper-left of screen
+
+Step 4:
+
+Typed Capital L to move to the last line
+
+Step 5:
+
+Pressed Up Arrow, Right arrow
+
+Step 6:
+
+Typed Capital G, to GOTO last line
+
+Step 7:
+
+Typed 2G to move to the beginning of the second line
+
+Step 8:
+
+Typed w to go forward by a word
+
+Step 9: 
+
+Typed b to go back one word.
+
+Project 3-5:
+
+Step 1:
+
+Pressed esc
+
+Step 2:
+
+Typed 1G
+
+Step 3:
+
+Typed dd
+
+Step 4:
+
+Pressed w 
+
+Step 5:
+
+Typed dw to delete current word
+
+Step 6:
+
+Type consists of between Text and Lines
+
+Step 7:
+
+Moved to extra s in consists and switched to command mode, esc
+
+Step 8:
+
+Deleted the s by typing x
+
+Step 9:
+
+Typed 5G
+
+Step 10:
+
+Typed d$
+
+Step 11:
+
+Typed, " consist of words "
+
+Step 12:
+
+Pressed esc, used arrow keys to get to "l" in lines.
+
+Step 13:
+
+Typed d0
+
+Step 14:
+
+Typed "Words form"
+
+Project 3-6:
+
+Step 1:
+
+Pressed esc
+
+Step 2:
+
+Typed H
+
+Step 3:
+
+Typed /cons and pressed enter
+
+Step 4:
+
+Pressed n, and it moves to next instance on the pattern cons
+
+Step 5:
+
+Pressed Ctrl + G
+
+Project 3-7
+
+Step 1:
+
+Pressed esc
+
+Step 2:
+
+Type H to go to beginning of the file
+
+Step 3:
+
+Type /text
+Pressed Enter
+
+Step 4:
+
+Typed n
+
+Step 5:
+
+Pressed esc
+
+Step 6:
+
+Typed 1,$s/text/documents/g
+
+Step 7:
+
+Pressed Enter
+
+Project 3-8
+
+Step 1:
+
+Pressed Esc
+
+Step 2:
+
+Typed :w
+Pressed enter
+
+Step 3:
+
+Pressed :x 
+Pressed Enter
+
+Project 3-9
+
+Step 1:
+
+Typed vi practice
+
+Step 2:
+
+Pressed esc
+
+Step 3:
+
+Typed :r textfiles
+Pressed Enter
+
+Step 4:
+
+Moved to blank line
+Typed dd, blank line deleted.
+
+Project 3-10
+
+Step 1:
+
+Pressed esc
+
+Step 2:
+
+Typed :!cal
+Pressed Enter
+
+Step 3:
+
+Pressed Enter
+
+Step 4:
+
+ Typed ctrl-z
+
+Step 5:
+
+Typed ls -l
+
+Step 6:
+
+typed pwd
+pressed enter
+
+Step 7:
+
+typed cat textfiles
+pressed enter
+
+Step 8:
+
+typed fg
+pressed enter
+
+Project 3-11:
+
+Step 1:
+
+Pressed esc, back in command mode
+
+Step 2:
+
+Typed :set number
+Pressed Enter
+
+Step 3:
+
+Typed :7,9d
+Pressed Enter
+
+Project 3-12
+
+Step 1:
+
+Typed H while in command mode
+
+Step 2:
+
+Typed 3dd
+
+Step 3:
+
+Typed G
+
+Step 4:
+
+Typed p to paste
