@@ -1,0 +1,1065 @@
+Course : CPS218 UNIX
+Professor: Dr. Shahab Hussain
+Semester:  Spring 2021
+Assignment: 5
+Student names (s): Patrick Nelson
+Deadline: 04/17/2021
+
+Project 5-1
+
+Step 1:
+
+pat@patMintPC:~$ ls -l /etc
+total 1208
+drwxr-xr-x  3 root root    4096 Jan  3 11:38 acpi
+-rw-r--r--  1 root root    3028 Jan  3 11:14 adduser.conf
+-rw-r--r--  1 root root      10 Apr 17 15:10 adjtime
+drwxr-xr-x  3 root root    4096 Jan  3 11:23 alsa
+drwxr-xr-x  2 root root    4096 Apr 17 16:45 alternatives
+-rw-r--r--  1 root root     401 Jul 16  2019 anacrontab
+-rw-r--r--  1 root root     433 Oct  1  2017 apg.conf
+drwxr-xr-x  5 root root    4096 Jan  3 11:24 apm
+drwxr-xr-x  3 root root    4096 Jan  3 11:36 apparmor
+drwxr-xr-x  7 root root    4096 Apr 17 16:00 apparmor.d
+drwxr-xr-x  4 root root    4096 Apr 17 15:13 apport
+-rw-r--r--  1 root root     769 Jan 18  2020 appstream.conf
+drwxr-xr-x  7 root root    4096 Apr 17 15:14 apt
+drwxr-xr-x  3 root root    4096 Jan  3 11:42 avahi
+-rw-r--r--  1 root root    2319 Feb 25  2020 bash.bashrc
+-rw-r--r--  1 root root      45 Jan 25  2020 bash_completion
+drwxr-xr-x  2 root root    4096 Apr 17 17:03 bash_completion.d
+-rw-r--r--  1 root root     367 Apr 14  2020 bindresvport.blacklist
+drwxr-xr-x  2 root root    4096 Apr 22  2020 binfmt.d
+drwxr-xr-x  2 root root    4096 Jan  3 11:37 bluetooth
+-rw-r-----  1 root root      33 Jan  3 11:42 brlapi.key
+drwxr-xr-x  7 root root    4096 Jan  3 11:35 brltty
+-rw-r--r--  1 root root   26916 Mar  3  2020 brltty.conf
+drwxr-xr-x  3 root root    4096 Jan  3 11:14 ca-certificates
+-rw-r--r--  1 root root    6569 Apr 17 15:58 ca-certificates.conf
+-rw-r--r--  1 root root    6505 Jan  3 11:18 ca-certificates.conf.dpkg-old
+drwxr-xr-x  2 root root    4096 Jan  3 11:37 calendar
+-rw-r--r--  1 root root     429 Jan  3 11:45 casper.conf
+drwxr-s---  2 root dip     4096 Jan  3 11:37 chatscripts
+drwxr-xr-x  2 root root    4096 Jan  3 11:41 cifs-utils
+drwxr-xr-x  2 root root    4096 Apr 17 15:10 console-setup
+drwxr-xr-x  2 root root    4096 Jan  3 11:39 cracklib
+drwxr-xr-x  2 root root    4096 Jan  3 11:36 cron.d
+drwxr-xr-x  2 root root    4096 Apr 17 15:58 cron.daily
+drwxr-xr-x  2 root root    4096 Jan  3 11:16 cron.hourly
+drwxr-xr-x  2 root root    4096 Jan  3 11:36 cron.monthly
+-rw-r--r--  1 root root    1042 Feb 13  2020 crontab
+drwxr-xr-x  2 root root    4096 Jan  3 11:41 cron.weekly
+drwxr-xr-x  2 root root    4096 Jan  3 11:42 cryptsetup-initramfs
+drwxr-xr-x  5 root lp      4096 Apr 17 19:04 cups
+drwxr-xr-x  2 root root    4096 Jan  3 11:39 cupshelpers
+drwxr-xr-x  4 root root    4096 Jan  3 11:15 dbus-1
+drwxr-xr-x  3 root root    4096 Jan  3 11:20 dconf
+-rw-r--r--  1 root root    2969 Aug  3  2019 debconf.conf
+-rw-r--r--  1 root root      13 Dec  5  2019 debian_version
+drwxr-xr-x  3 root root    4096 Apr 17 15:58 default
+-rw-r--r--  1 root root     604 Sep 15  2018 deluser.conf
+drwxr-xr-x  2 root root    4096 Jan  3 11:16 depmod.d
+drwxr-xr-x  4 root root    4096 Apr 17 16:00 dhcp
+drwxr-xr-x  2 root root    4096 Jan  3 11:45 dictionaries-common
+drwxr-xr-x  4 root root    4096 Apr 17 16:00 dkms
+drwxr-xr-x  3 root root    4096 Jan  3 11:27 doc-base
+drwxr-xr-x  4 root root    4096 Jan  3 11:16 dpkg
+-rw-r--r--  1 root root     685 Feb 14  2020 e2scrub.conf
+drwxr-xr-x  3 root root    4096 Jan  3 11:24 emacs
+-rw-r--r--  1 root root     106 Jan  3 11:18 environment
+drwxr-xr-x  2 root root    4096 Jan  3 11:38 environment.d
+-rw-r--r--  1 root root    1816 Dec 26  2019 ethertypes
+drwxr-xr-x  3 root root    4096 Apr 17 16:00 firefox
+drwxr-xr-x  4 root root    4096 Jan  3 11:19 fonts
+-rw-r--r--  1 root root      20 Feb 10  2020 fprintd.conf
+-rw-r--r--  1 root root     594 Apr 17 15:08 fstab
+-rw-r--r--  1 root root     280 Jun 20  2014 fuse.conf
+drwxr-xr-x  3 root root    4096 Jan  3 11:40 fwupd
+-rw-r--r--  1 root root    2584 Feb  1  2020 gai.conf
+-rw-r--r--  1 root root    4372 May 18  2020 gamemode.ini
+drwxr-xr-x  2 root root    4096 Jan  3 11:39 gdb
+drwxr-xr-x  2 root root    4096 Jan  3 11:39 geoclue
+drwxr-xr-x  4 root root    4096 Jan  3 11:25 ghostscript
+drwxr-xr-x  3 root root    4096 Jan  3 11:22 glvnd
+drwxr-xr-x  2 root root    4096 Jan  3 11:36 gnome
+drwxr-xr-x  2 root root    4096 Jan  3 11:37 gnome-app-install
+drwxr-xr-x  2 root root    4096 Jan  3 11:40 groff
+-rw-r--r--  1 root root    1087 Apr 17 16:07 group
+-rw-r--r--  1 root root    1083 Apr 17 15:25 group-
+drwxr-xr-x  2 root root    4096 Apr 17 15:14 grub.d
+-rw-r-----  1 root shadow   906 Apr 17 16:07 gshadow
+-rw-r-----  1 root shadow   902 Apr 17 15:25 gshadow-
+drwxr-xr-x  3 root root    4096 Jan  3 11:19 gss
+drwxr-xr-x  2 root root    4096 Jan  3 11:38 gtk-2.0
+drwxr-xr-x  2 root root    4096 Jan  3 11:20 gtk-3.0
+drwxr-xr-x  2 root root    4096 Feb  7  2020 guest-session
+drwxr-xr-x  3 root root    4096 Jan  3 11:29 gufw
+-rw-r--r--  1 root root    6748 Jan 21  2018 hddtemp.db
+-rw-r--r--  1 root root    5060 Aug 21  2019 hdparm.conf
+-rw-r--r--  1 root root      92 Dec  5  2019 host.conf
+-rw-r--r--  1 root root      10 Apr 17 15:09 hostname
+-rw-r--r--  1 root root     224 Apr 17 15:09 hosts
+-rw-r--r--  1 root root     411 Jan  3 11:37 hosts.allow
+-rw-r--r--  1 root root     711 Jan  3 11:37 hosts.deny
+drwxr-xr-x  2 root root    4096 Jan  3 11:42 hp
+drwxr-xr-x  3 root root    4096 Jan  3 11:27 ifplugd
+drwxr-xr-x  2 root root    4096 Apr 17 16:45 ImageMagick-6
+drwxr-xr-x  2 root root    4096 Apr 17 15:13 init
+drwxr-xr-x  2 root root    4096 Apr 17 16:01 init.d
+drwxr-xr-x  5 root root    4096 Apr 17 16:01 initramfs-tools
+-rw-r--r--  1 root root    1748 Feb 25  2020 inputrc
+-rw-r--r--  1 root root      71 Feb  9  2017 inxi.conf
+drwxr-xr-x  4 root root    4096 Jan  3 11:16 iproute2
+-rw-r--r--  1 root root      30 Dec  3 08:25 issue
+-rw-r--r--  1 root root      23 Dec  3 08:25 issue.net
+drwxr-xr-x  5 root root    4096 Apr 17 16:01 java-11-openjdk
+drwxr-xr-x  8 root root    4096 Jan  3 11:32 kernel
+-rw-r--r--  1 root root     110 Apr 17 15:13 kernel-img.conf
+-rw-r--r--  1 root root    1308 Dec  1  2017 kerneloops.conf
+drwxr-xr-x  2 root root    4096 Apr 17 15:58 ldap
+-rw-r--r--  1 root root   91040 Apr 17 16:45 ld.so.cache
+-rw-r--r--  1 root root      34 Apr 14  2020 ld.so.conf
+drwxr-xr-x  2 root root    4096 Apr 17 15:58 ld.so.conf.d
+-rw-r--r--  1 root root       0 Dec  3 08:21 legal
+-rw-r--r--  1 root root      27 Jan 18  2018 libao.conf
+-rw-r--r--  1 root root     191 Feb 18  2020 libaudit.conf
+drwxr-xr-x  3 root root    4096 Jan  3 11:27 libblockdev
+drwxr-xr-x  2 root root    4096 Jan  3 11:37 libnl-3
+drwxr-xr-x  2 root root    4096 Jun 25  2019 libpaper.d
+drwxr-xr-x  2 root root    4096 Apr 17 15:11 libreoffice
+drwxr-xr-x  4 root root    4096 Jan  3 11:42 lightdm
+-rw-r--r--  1 root root    1561 Apr  2  2020 lintianrc
+drwxr-xr-x  2 root root    4096 Jan  3 11:43 linuxmint
+-rw-r--r--  1 root root    2996 Apr 14  2020 locale.alias
+-rw-r--r--  1 root root    9440 Apr 17 15:12 locale.gen
+lrwxrwxrwx  1 root root      36 Apr 17 15:58 localtime -> /usr/share/zoneinfo/America/New_York
+drwxr-xr-x  4 root root    4096 Jan  3 11:27 logcheck
+-rw-r--r--  1 root root   10550 Feb  7  2020 login.defs
+-rw-r--r--  1 root root     533 Jan 21  2019 logrotate.conf
+drwxr-xr-x  2 root root    4096 Apr 17 16:01 logrotate.d
+-rw-r--r--  1 root root     111 Dec  3 08:24 lsb-release
+-rw-r--r--  1 root root   14867 Jan 31  2019 ltrace.conf
+drwxr-xr-x  3 root root    4096 Jan  3 11:43 lvm
+-r--r--r--  1 root root      33 Jan  3 11:14 machine-id
+-rw-r--r--  1 root root     111 Jan 16  2020 magic
+-rw-r--r--  1 root root     111 Jan 16  2020 magic.mime
+-rw-r--r--  1 root root   39827 Apr 17 17:51 mailcap
+-rw-r--r--  1 root root     449 Oct 18  2019 mailcap.order
+-rw-r--r--  1 root root    5215 Feb 25  2020 manpath.config
+drwxr-xr-x  2 root root    4096 Jan  3 11:37 menu-methods
+-rw-r--r--  1 root root   24546 Oct 18  2019 mime.types
+-rw-r--r--  1 root root     808 Feb 14  2020 mke2fs.conf
+drwxr-xr-x  2 root root    4096 Apr 17 16:00 modprobe.d
+-rw-r--r--  1 root root     195 Jan  3 11:16 modules
+drwxr-xr-x  2 root root    4096 Apr 17 15:58 modules-load.d
+lrwxrwxrwx  1 root root      19 Apr 17 15:11 mtab -> ../proc/self/mounts
+-rw-r--r--  1 root root     624 Mar 22  2020 mtools.conf
+drwxr-xr-x  3 root root    4096 Jan  3 11:35 mysql
+-rw-r--r--  1 root root   10037 Feb  7  2020 nanorc
+drwxr-xr-x  2 root root    4096 Feb  8  2018 netplan
+drwxr-xr-x  7 root root    4096 Jan  3 11:37 network
+drwxr-xr-x  8 root root    4096 Jan  3 11:15 networkd-dispatcher
+drwxr-xr-x  7 root root    4096 Jan  3 11:42 NetworkManager
+-rw-r--r--  1 root root      91 Dec  5  2019 networks
+drwxr-xr-x  2 root root    4096 Jan  3 11:16 newt
+-rw-r--r--  1 root root     553 Jan  3 11:42 nsswitch.conf
+drwxr-xr-x  2 root root    4096 Jan  3 11:38 openal
+drwxr-xr-x  3 root root    4096 Apr 17 15:25 OpenCL
+drwxr-xr-x  4 root root    4096 Jan  3 11:38 openvpn
+drwxr-xr-x  2 root root    4096 Jan  3 11:13 opt
+lrwxrwxrwx  1 root root      21 Apr 17 15:08 os-release -> ../usr/lib/os-release
+drwxr-xr-x  2 root root    4096 Jan  3 11:40 PackageKit
+-rw-r--r--  1 root root     552 Dec 17  2019 pam.conf
+drwxr-xr-x  2 root root    4096 Apr 17 16:01 pam.d
+-rw-r--r--  1 root root       7 Apr 17 15:11 papersize
+-rw-r--r--  1 root root    2822 Apr 17 15:25 passwd
+-rw-r--r--  1 root root    2794 Apr 17 15:25 passwd-
+drwxr-xr-x  2 root root    4096 Jan  3 11:37 pcmcia
+drwxr-xr-x  4 root root    4096 Jan  3 11:39 perl
+drwxr-xr-x  4 root root    4096 Jan  3 11:28 pki
+drwxr-xr-x  5 root root    4096 Jan  3 11:33 pm
+-rw-r--r--  1 root root    7649 Jan  3 11:41 pnm2ppa.conf
+drwxr-xr-x  4 root root    4096 Jan  3 11:19 polkit-1
+drwxr-xr-x  8 root dip     4096 Jan  3 11:38 ppp
+-rw-r--r--  1 root root       3 Apr 17 15:25 prime-discrete
+-rw-r--r--  1 root root     581 Dec  5  2019 profile
+drwxr-xr-x  2 root root    4096 Apr 17 16:01 profile.d
+-rw-r--r--  1 root root    2932 Apr  1  2013 protocols
+drwxr-xr-x  3 root root    4096 Apr 17 16:01 pulse
+drwxr-xr-x  2 root root    4096 Jan  3 11:14 python3
+drwxr-xr-x  2 root root    4096 Apr 17 15:58 python3.8
+drwxr-xr-x  2 root root    4096 Jan  3 11:43 rc0.d
+drwxr-xr-x  2 root root    4096 Jan  3 11:43 rc1.d
+drwxr-xr-x  2 root root    4096 Jan  3 11:43 rc2.d
+drwxr-xr-x  2 root root    4096 Jan  3 11:43 rc3.d
+drwxr-xr-x  2 root root    4096 Jan  3 11:43 rc4.d
+drwxr-xr-x  2 root root    4096 Jan  3 11:43 rc5.d
+drwxr-xr-x  2 root root    4096 Jan  3 11:43 rc6.d
+drwxr-xr-x  2 root root    4096 Jan  3 11:43 rcS.d
+-rw-r--r--  1 root root    1889 Oct 20  2019 request-key.conf
+drwxr-xr-x  2 root root    4096 Jan  3 11:41 request-key.d
+lrwxrwxrwx  1 root root      39 Apr 17 15:09 resolv.conf -> ../run/systemd/resolve/stub-resolv.conf
+lrwxrwxrwx  1 root root      13 Dec 15 20:38 rmt -> /usr/sbin/rmt
+-rw-r--r--  1 root root     887 Apr  1  2013 rpc
+-rw-r--r--  1 root root    1382 Feb 11  2020 rsyslog.conf
+drwxr-xr-x  2 root root    4096 Jan  3 11:41 rsyslog.d
+drwxr-xr-x  3 root root    4096 Jan  3 11:36 samba
+drwxr-xr-x  3 root root    4096 Jan  3 11:42 sane.d
+drwxr-xr-x  4 root root    4096 Jan  3 11:35 security
+drwxr-xr-x  2 root root    4096 Jan  3 11:13 selinux
+-rw-r--r--  1 root root   10593 Nov  6  2019 sensors3.conf
+drwxr-xr-x  2 root root    4096 Jan  3 11:36 sensors.d
+-rw-r--r--  1 root root   14464 Feb 16  2020 services
+drwxr-xr-x  3 root root    4096 Jan  3 11:45 sgml
+-rw-r-----  1 root shadow  1443 Apr 17 15:25 shadow
+-rw-r-----  1 root shadow  1443 Apr 17 15:25 shadow-
+-rw-r--r--  1 root root     138 Apr 17 17:04 shells
+drwxr-xr-x  4 root root    4096 Jan  3 11:37 skel
+drwxr-xr-x  2 root root    4096 Jan  3 11:36 snmp
+drwxr-xr-x  4 root root    4096 Jan  3 11:42 speech-dispatcher
+drwxr-xr-x  3 root root    4096 Apr 17 16:00 ssh
+drwxr-xr-x  4 root root    4096 Apr 17 15:58 ssl
+-rw-r--r--  1 root root      17 Apr 17 15:10 subgid
+-rw-r--r--  1 root root       0 Jan  3 11:14 subgid-
+-rw-r--r--  1 root root      17 Apr 17 15:10 subuid
+-rw-r--r--  1 root root       0 Jan  3 11:14 subuid-
+-r--r-----  1 root root     755 Feb  3  2020 sudoers
+drwxr-xr-x  2 root root    4096 Apr 17 16:01 sudoers.d
+-rw-r--r--  1 root root    2351 Feb 13  2020 sysctl.conf
+drwxr-xr-x  2 root root    4096 Apr 17 15:58 sysctl.d
+drwxr-xr-x  6 root root    4096 Apr 17 16:00 systemd
+drwxr-xr-x  2 root root    4096 Jan  3 11:13 terminfo
+drwxr-xr-x  2 root root    4096 Jan  3 11:38 thermald
+drwxr-xr-x  2 root root    4096 Apr 17 15:11 thunderbird
+drwxr-xr-x  3 root root    4096 Jan  3 11:40 timeshift
+-rw-r--r--  1 root root      17 Apr 17 15:58 timezone
+drwxr-xr-x  2 root root    4096 Apr 17 15:14 timidity
+drwxr-xr-x  2 root root    4096 Apr 22  2020 tmpfiles.d
+drwxr-xr-x  2 root root    4096 Jan  3 11:16 ubuntu-advantage
+-rw-r--r--  1 root root    1260 Dec 14  2018 ucf.conf
+drwxr-xr-x  4 root root    4096 Apr 17 15:12 udev
+drwxr-xr-x  2 root root    4096 Jan  3 11:42 udisks2
+drwxr-xr-x  3 root root    4096 Jan  3 11:41 ufw
+-rw-r--r--  1 root root     556 Jul 16  2019 updatedb.conf
+drwxr-xr-x  2 root root    4096 Jan  3 11:40 update-motd.d
+drwxr-xr-x  2 root root    4096 Jan  3 11:39 UPower
+drwxr-xr-x  2 root root    4096 Jan  3 11:44 upstream-release
+-rw-r--r--  1 root root    1523 Feb 10  2020 usb_modeswitch.conf
+drwxr-xr-x  2 root root    4096 Feb 24  2020 usb_modeswitch.d
+-rw-r--r--  1 root root      51 Aug 28  2019 vdpau_wrapper.cfg
+drwxr-xr-x  2 root root    4096 Jan  3 11:16 vim
+lrwxrwxrwx  1 root root      23 Apr 17 15:08 vtrgb -> /etc/alternatives/vtrgb
+drwxr-xr-x  5 root root    4096 Jan  3 11:22 vulkan
+-rw-r--r--  1 root root    4942 Jul 24  2019 wgetrc
+drwxr-xr-x  2 root root    4096 Apr 17 16:00 wpa_supplicant
+drwxr-xr-x 10 root root    4096 Jan  3 11:42 X11
+-rw-r--r--  1 root root     642 Sep 23  2019 xattr.conf
+drwxr-xr-x  6 root root    4096 Jan  3 11:35 xdg
+drwxr-xr-x  2 root root    4096 Jan  3 11:45 xml
+drwxr-xr-x  2 root root    4096 Apr 17 17:04 zsh
+-rw-r--r--  1 root root     477 Oct  7  2019 zsh_command_not_found
+pat@patMintPC:~$
+
+Step 2:
+
+pat@patMintPC:~$ ls -l /etc | more
+
+drwxr-xr-x  2 root root    4096 Apr 22  2020 binfmt.d
+drwxr-xr-x  2 root root    4096 Jan  3 11:37 bluetooth
+-rw-r-----  1 root root      33 Jan  3 11:42 brlapi.key
+drwxr-xr-x  7 root root    4096 Jan  3 11:35 brltty
+-rw-r--r--  1 root root   26916 Mar  3  2020 brltty.conf
+drwxr-xr-x  3 root root    4096 Jan  3 11:14 ca-certificates
+-rw-r--r--  1 root root    6569 Apr 17 15:58 ca-certificates.conf
+-rw-r--r--  1 root root    6505 Jan  3 11:18 ca-certificates.conf.dpkg-old
+drwxr-xr-x  2 root root    4096 Jan  3 11:37 calendar
+-rw-r--r--  1 root root     429 Jan  3 11:45 casper.conf
+drwxr-s---  2 root dip     4096 Jan  3 11:37 chatscripts
+drwxr-xr-x  2 root root    4096 Jan  3 11:41 cifs-utils
+drwxr-xr-x  2 root root    4096 Apr 17 15:10 console-setup
+drwxr-xr-x  2 root root    4096 Jan  3 11:39 cracklib
+drwxr-xr-x  2 root root    4096 Jan  3 11:36 cron.d
+drwxr-xr-x  2 root root    4096 Apr 17 15:58 cron.daily
+drwxr-xr-x  2 root root    4096 Jan  3 11:16 cron.hourly
+drwxr-xr-x  2 root root    4096 Jan  3 11:36 cron.monthly
+-rw-r--r--  1 root root    1042 Feb 13  2020 crontab
+drwxr-xr-x  2 root root    4096 Jan  3 11:41 cron.weekly
+drwxr-xr-x  2 root root    4096 Jan  3 11:42 cryptsetup-initramfs
+drwxr-xr-x  5 root lp      4096 Apr 17 19:04 cups
+drwxr-xr-x  2 root root    4096 Jan  3 11:39 cupshelpers
+drwxr-xr-x  4 root root    4096 Jan  3 11:15 dbus-1
+drwxr-xr-x  3 root root    4096 Jan  3 11:20 dconf
+-rw-r--r--  1 root root    2969 Aug  3  2019 debconf.conf
+-rw-r--r--  1 root root      13 Dec  5  2019 debian_version
+drwxr-xr-x  3 root root    4096 Apr 17 15:58 default
+-rw-r--r--  1 root root     604 Sep 15  2018 deluser.conf
+drwxr-xr-x  2 root root    4096 Jan  3 11:16 depmod.d
+drwxr-xr-x  4 root root    4096 Apr 17 16:00 dhcp
+drwxr-xr-x  2 root root    4096 Jan  3 11:45 dictionaries-common
+drwxr-xr-x  4 root root    4096 Apr 17 16:00 dkms
+drwxr-xr-x  3 root root    4096 Jan  3 11:27 doc-base
+drwxr-xr-x  4 root root    4096 Jan  3 11:16 dpkg
+-rw-r--r--  1 root root     685 Feb 14  2020 e2scrub.conf
+drwxr-xr-x  3 root root    4096 Jan  3 11:24 emacs
+-rw-r--r--  1 root root     106 Jan  3 11:18 environment
+drwxr-xr-
+--More--
+
+Project 5-2
+
+Step 1:
+
+pat@patMintPC:~$ ls /etc|sort -r|more
+zsh_command_not_found
+zsh
+xml
+xdg
+xattr.conf
+X11
+wpa_supplicant
+wgetrc
+vulkan
+vtrgb
+vim
+vdpau_wrapper.cfg
+usb_modeswitch.d
+usb_modeswitch.conf
+upstream-release
+UPower
+update-motd.d
+updatedb.conf
+ufw
+udisks2
+udev
+ucf.conf
+ubuntu-advantage
+tmpfiles.d
+timidity
+timezone
+timeshift
+thunderbird
+thermald
+terminfo
+systemd
+sysctl.d
+sysctl.conf
+sudoers.d
+sudoers
+subuid-
+subuid
+subgid-
+subgid
+ssl
+ssh
+speech-dispatcher
+snmp
+skel
+shells
+shadow-
+shadow
+sgml
+services
+sensors.d
+sensors3.conf
+selinux
+security
+sane.d
+samba
+rsyslog.d
+rsyslog.conf
+rpc
+rmt
+resolv.conf
+request-key.d
+request-key.conf
+rcS.d
+rc6.d
+rc5.d
+rc4.d
+rc3.d
+rc2.d
+rc1.d
+rc0.d
+python3.8
+python3
+pulse
+protocols
+profile.d
+profile
+prime-discrete
+ppp
+polkit-1
+pnm2ppa.conf
+pm
+pki
+perl
+pcmcia
+passwd-
+passwd
+papersize
+pam.d
+pam.conf
+PackageKit
+os-release
+opt
+openvpn
+OpenCL
+openal
+nsswitch.conf
+newt
+networks
+NetworkManager
+networkd-dispatcher
+network
+netplan
+nanorc
+mysql
+mtools.conf
+mtab
+modules-load.d
+modules
+modprobe.d
+mke2fs.conf
+mime.types
+menu-methods
+manpath.config
+mailcap.order
+mailcap
+magic.mime
+magic
+machine-id
+lvm
+ltrace.conf
+lsb-release
+logrotate.d
+logrotate.conf
+login.defs
+logcheck
+localtime
+locale.gen
+locale.alias
+linuxmint
+lintianrc
+lightdm
+libreoffice
+libpaper.d
+libnl-3
+libblockdev
+libaudit.conf
+libao.conf
+legal
+ld.so.conf.d
+ld.so.conf
+ld.so.cache
+ldap
+kerneloops.conf
+kernel-img.conf
+kernel
+java-11-openjdk
+issue.net
+issue
+iproute2
+inxi.conf
+inputrc
+initramfs-tools
+init.d
+init
+ImageMagick-6
+ifplugd
+hp
+hosts.deny
+hosts.allow
+hosts
+hostname
+host.conf
+hdparm.conf
+hddtemp.db
+gufw
+guest-session
+gtk-3.0
+gtk-2.0
+gss
+gshadow-
+gshadow
+grub.d
+group-
+group
+groff
+gnome-app-install
+gnome
+glvnd
+ghostscript
+geoclue
+gdb
+gamemode.ini
+gai.conf
+fwupd
+fuse.conf
+fstab
+fprintd.conf
+fonts
+firefox
+ethertypes
+environment.d
+environment
+emacs
+e2scrub.conf
+dpkg
+doc-base
+dkms
+dictionaries-common
+dhcp
+depmod.d
+deluser.conf
+default
+debian_version
+debconf.conf
+dconf
+dbus-1
+cupshelpers
+cups
+cryptsetup-initramfs
+cron.weekly
+crontab
+cron.monthly
+cron.hourly
+cron.daily
+cron.d
+cracklib
+console-setup
+cifs-utils
+chatscripts
+casper.conf
+calendar
+ca-certificates.conf.dpkg-old
+ca-certificates.conf
+ca-certificates
+brltty.conf
+brltty
+brlapi.key
+bluetooth
+binfmt.d
+bindresvport.blacklist
+bash_completion.d
+bash_completion
+bash.bashrc
+avahi
+apt
+appstream.conf
+apport
+apparmor.d
+apparmor
+apm
+apg.conf
+anacrontab
+alternatives
+alsa
+adjtime
+adduser.conf
+acpi
+pat@patMintPC:~$
+
+Project 5-3
+ I grepped something different than recommended as I did not have the file mentioned
+ in project, but i demo'ed the same commands.
+
+Step 1:
+
+pat@patMintPC:~$ grep PATH .bashrc
+export PATH=/home/pat/clion-2021.1/bin:$PATH
+export PATH=/home/pat/idea-IU-211.6693.111/bin:$PATH
+
+Step 2:
+
+pat@patMintPC:~$ grep PATH .bashrc|more
+export PATH=/home/pat/clion-2021.1/bin:$PATH
+export PATH=/home/pat/idea-IU-211.6693.111/bin:$PATH
+
+
+Step 3:
+
+pat@patMintPC:~$ grep PATH .bashrc|head
+export PATH=/home/pat/clion-2021.1/bin:$PATH
+export PATH=/home/pat/idea-IU-211.6693.111/bin:$PATH
+
+Step 4:
+
+clear
+
+Step 5:
+
+pat@patMintPC:~$ grep Linux .bashrc
+pat@patMintPC:~$
+
+Step 6:
+
+pat@patMintPC:~$ grep -i "^pat" .bashrc
+
+Step 7:
+
+pat@patMintPC:~$ grep clion /home/*
+grep: /home/pat: Is a directory
+
+Step 8:
+
+pat@patMintPC:~$ grep -l linux /etc/*
+grep: /etc/acpi: Is a directory
+grep: /etc/alsa: Is a directory
+grep: /etc/alternatives: Is a directory
+grep: /etc/apm: Is a directory
+grep: /etc/apparmor: Is a directory
+grep: /etc/apparmor.d: Is a directory
+grep: /etc/apport: Is a directory
+grep: /etc/apt: Is a directory
+grep: /etc/avahi: Is a directory
+grep: /etc/bash_completion.d: Is a directory
+grep: /etc/binfmt.d: Is a directory
+grep: /etc/bluetooth: Is a directory
+grep: /etc/brlapi.key: Permission denied
+grep: /etc/brltty: Is a directory
+grep: /etc/ca-certificates: Is a directory
+grep: /etc/calendar: Is a directory
+grep: /etc/chatscripts: Is a directory
+grep: /etc/cifs-utils: Is a directory
+grep: /etc/console-setup: Is a directory
+grep: /etc/cracklib: Is a directory
+grep: /etc/cron.d: Is a directory
+grep: /etc/cron.daily: Is a directory
+grep: /etc/cron.hourly: Is a directory
+grep: /etc/cron.monthly: Is a directory
+grep: /etc/cron.weekly: Is a directory
+grep: /etc/cryptsetup-initramfs: Is a directory
+grep: /etc/cups: Is a directory
+grep: /etc/cupshelpers: Is a directory
+grep: /etc/dbus-1: Is a directory
+grep: /etc/dconf: Is a directory
+grep: /etc/default: Is a directory
+grep: /etc/depmod.d: Is a directory
+grep: /etc/dhcp: Is a directory
+grep: /etc/dictionaries-common: Is a directory
+grep: /etc/dkms: Is a directory
+grep: /etc/doc-base: Is a directory
+grep: /etc/dpkg: Is a directory
+grep: /etc/emacs: Is a directory
+grep: /etc/environment.d: Is a directory
+grep: /etc/firefox: Is a directory
+grep: /etc/fonts: Is a directory
+grep: /etc/fwupd: Is a directory
+grep: /etc/gdb: Is a directory
+grep: /etc/geoclue: Is a directory
+grep: /etc/ghostscript: Is a directory
+grep: /etc/glvnd: Is a directory
+grep: /etc/gnome: Is a directory
+grep: /etc/gnome-app-install: Is a directory
+grep: /etc/groff: Is a directory
+grep: /etc/grub.d: Is a directory
+grep: /etc/gshadow: Permission denied
+grep: /etc/gshadow-: Permission denied
+grep: /etc/gss: Is a directory
+grep: /etc/gtk-2.0: Is a directory
+grep: /etc/gtk-3.0: Is a directory
+grep: /etc/guest-session: Is a directory
+grep: /etc/gufw: Is a directory
+grep: /etc/hp: Is a directory
+grep: /etc/ifplugd: Is a directory
+grep: /etc/ImageMagick-6: Is a directory
+grep: /etc/init: Is a directory
+grep: /etc/init.d: Is a directory
+grep: /etc/initramfs-tools: Is a directory
+grep: /etc/iproute2: Is a directory
+grep: /etc/java-11-openjdk: Is a directory
+grep: /etc/kernel: Is a directory
+grep: /etc/ldap: Is a directory
+/etc/ld.so.cache
+grep: /etc/ld.so.conf.d: Is a directory
+grep: /etc/libblockdev: Is a directory
+grep: /etc/libnl-3: Is a directory
+grep: /etc/libpaper.d: Is a directory
+grep: /etc/libreoffice: Is a directory
+grep: /etc/lightdm: Is a directory
+grep: /etc/linuxmint: Is a directory
+grep: /etc/logcheck: Is a directory
+grep: /etc/logrotate.d: Is a directory
+grep: /etc/lvm: Is a directory
+grep: /etc/menu-methods: Is a directory
+grep: /etc/modprobe.d: Is a directory
+grep: /etc/modules-load.d: Is a directory
+grep: /etc/mysql: Is a directory
+grep: /etc/netplan: Is a directory
+grep: /etc/network: Is a directory
+grep: /etc/networkd-dispatcher: Is a directory
+grep: /etc/NetworkManager: Is a directory
+grep: /etc/newt: Is a directory
+grep: /etc/openal: Is a directory
+grep: /etc/OpenCL: Is a directory
+grep: /etc/openvpn: Is a directory
+grep: /etc/opt: Is a directory
+/etc/os-release
+grep: /etc/PackageKit: Is a directory
+grep: /etc/pam.d: Is a directory
+grep: /etc/pcmcia: Is a directory
+grep: /etc/perl: Is a directory
+grep: /etc/pki: Is a directory
+grep: /etc/pm: Is a directory
+grep: /etc/polkit-1: Is a directory
+grep: /etc/ppp: Is a directory
+grep: /etc/profile.d: Is a directory
+grep: /etc/pulse: Is a directory
+grep: /etc/python3: Is a directory
+grep: /etc/python3.8: Is a directory
+grep: /etc/rc0.d: Is a directory
+grep: /etc/rc1.d: Is a directory
+grep: /etc/rc2.d: Is a directory
+grep: /etc/rc3.d: Is a directory
+grep: /etc/rc4.d: Is a directory
+grep: /etc/rc5.d: Is a directory
+grep: /etc/rc6.d: Is a directory
+grep: /etc/rcS.d: Is a directory
+grep: /etc/request-key.d: Is a directory
+/etc/rmt
+grep: /etc/rsyslog.d: Is a directory
+grep: /etc/samba: Is a directory
+grep: /etc/sane.d: Is a directory
+grep: /etc/security: Is a directory
+grep: /etc/selinux: Is a directory
+grep: /etc/sensors.d: Is a directory
+grep: /etc/sgml: Is a directory
+grep: /etc/shadow: Permission denied
+grep: /etc/shadow-: Permission denied
+grep: /etc/skel: Is a directory
+grep: /etc/snmp: Is a directory
+grep: /etc/speech-dispatcher: Is a directory
+grep: /etc/ssh: Is a directory
+grep: /etc/ssl: Is a directory
+grep: /etc/sudoers: Permission denied
+grep: /etc/sudoers.d: Is a directory
+grep: /etc/sysctl.d: Is a directory
+grep: /etc/systemd: Is a directory
+grep: /etc/terminfo: Is a directory
+grep: /etc/thermald: Is a directory
+grep: /etc/thunderbird: Is a directory
+grep: /etc/timeshift: Is a directory
+grep: /etc/timidity: Is a directory
+grep: /etc/tmpfiles.d: Is a directory
+grep: /etc/ubuntu-advantage: Is a directory
+grep: /etc/udev: Is a directory
+grep: /etc/udisks2: Is a directory
+grep: /etc/ufw: Is a directory
+grep: /etc/update-motd.d: Is a directory
+grep: /etc/UPower: Is a directory
+grep: /etc/upstream-release: Is a directory
+grep: /etc/usb_modeswitch.d: Is a directory
+grep: /etc/vim: Is a directory
+grep: /etc/vulkan: Is a directory
+grep: /etc/wpa_supplicant: Is a directory
+grep: /etc/X11: Is a directory
+grep: /etc/xdg: Is a directory
+grep: /etc/xml: Is a directory
+grep: /etc/zsh: Is a directory
+pat@patMintPC:~$
+
+Step 8:
+
+clear
+
+Step 9:
+
+pat@patMintPC:~$ grep "PATH" .bashrc
+export PATH=/home/pat/clion-2021.1/bin:$PATH
+export PATH=/home/pat/idea-IU-211.6693.111/bin:$PATH
+
+Step 10:
+
+Clear
+
+Step 11:
+
+pat@patMintPC:~$ ls /etc|grep magic
+magic
+magic.mime
+pat@patMintPC:~$
+
+Project 5-4
+
+Step 1:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ vi zoo1
+
+Step 2:
+
+ Entered text into file in vi.
+
+ Step 3:
+
+ pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ uniq zoo1>zoo2
+
+Step 4:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ cat zoo2
+Monkeys:Bananas:2000:850.00
+Lions:Raw Meat:4000:1245.50
+Camels:Vegetables:2300:564.75
+Elephants:Hay:120000:1105.75
+
+Project 5-5
+
+Step 1:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ cat > my_list
+Football
+Basketball
+Skates
+Soccer ball
+
+Step 2:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ cp my_list your_list
+
+Step 3:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ comm my_list your_list
+		Football
+		Basketball
+		Skates
+		Soccer ball
+
+Step 4:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ cat >> my_list
+Golf Ball
+
+Step 5:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ comm my_list your_list
+		Football
+		Basketball
+		Skates
+		Soccer ball
+Golf Ball
+comm: file 1 is not in sorted order
+
+Step 6:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ cat >> your_list
+Tennis ball
+
+Step 7:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ comm my_list your_list
+		Football
+		Basketball
+		Skates
+		Soccer ball
+Golf Ball
+comm: file 1 is not in sorted order
+	Tennis ball
+
+Project 5-6
+
+Step 1:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ more zoo1 zoo2
+::::::::::::::
+zoo1
+::::::::::::::
+Monkeys:Bananas:2000:850.00
+Lions:Raw Meat:4000:1245.50
+Lions:Raw Meat:4000:1245.50
+Camels:Vegetables:2300:564.75
+Elephants:Hay:120000:1105.75
+Elephants:Hay:120000:1105.75
+--more---
+::::::::::::::
+zoo2
+::::::::::::::
+Monkeys:Bananas:2000:850.00
+Lions:Raw Meat:4000:1245.50
+Camels:Vegetables:2300:564.75
+Elephants:Hay:120000:1105.75
+
+Step 2:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ diff zoo1 zoo2
+3d2
+< Lions:Raw Meat:4000:1245.50
+5d3
+< Elephants:Hay:120000:1105.75
+
+Step 3:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ diff zoo2 zoo1
+2a3
+> Lions:Raw Meat:4000:1245.50
+3a5
+> Elephants:Hay:120000:1105.75
+
+Project 5-7
+
+Step 1:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ cat > counters
+Linux is a full featured Unix clone.
+Linux is available in free and commercial versions.
+
+Step 2:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ wc -c counters
+89 counters
+
+Step 3:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ wc -w counters
+15 counters
+
+Step 4:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ wc -lwc counters
+ 2 15 89 counters
+
+ Project 5-8
+
+ Step 1:
+
+ pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ emacs unix_stuff
+
+ Step 2:
+
+ Entered text into unix_stuff
+
+ Step 3:
+
+ pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ sed -n 3,4p unix_stuff
+ flat files. Flat files are those that are based on pure
+ text with standard ASCII codes. Flat files can be read by any operating system.
+
+ Step 4:
+
+ pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ sed -n -e 3,4d -e p unix_stuff
+Although Unix supports other database systems,
+UNIX has never abandoned the idea of working with
+
+Step 5:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ sed -n /Flat/p unix_stuff
+flat files. Flat files are those that are based on pure
+text with standard ASCII codes. Flat files can be read by any operating system
+
+Project 5-9
+
+Step 1:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ vi more_stuff
+
+Step 2:
+
+Entered text in Vi
+
+Step 3:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ sed -f more_stuff unix_stuff
+Although Unix supports other database systems,
+UNIX has never abandoned the idea of working with
+flat files. Flat files are those that are based on pure
+text with standard ASCII codes. Flat files can be read by any operating system.
+Informix and Oracle, two major relational database
+companies have installed their RDBMS packages on UNIX
+system for many years.
+
+Step 4:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ vi stuff_replace
+
+Step 5:
+
+Entered text
+
+Step 6:
+
+clear
+
+step 7:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ sed -f stuff_replace unix_stuff > unix_stuff2
+
+Step 8:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ cat unix_stuff2
+
+Project 5-10
+
+Step 1:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ tr [a-z][A-Z] < counters
+tr: missing operand after ‘[a-z][A-Z]’
+Two strings must be given when translating.
+Try 'tr --help' for more information.
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ tr [a-z][A-Z]< counters
+tr: missing operand after ‘[a-z][A-Z]’
+Two strings must be given when translating.
+Try 'tr --help' for more information.
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ tr [a-z][A-Z]<counters
+tr: missing operand after ‘[a-z][A-Z]’
+Two strings must be given when translating.
+Try 'tr --help' for more information.
+
+Step 2:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ tr -d "full" < counters
+Linx is a  eatred Unix cone.
+Linx is avaiabe in ree and commercia versions.
+
+
+Step 3:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ cat zoo2
+Monkeys:Bananas:2000:850.00
+Lions:Raw Meat:4000:1245.50
+Camels:Vegetables:2300:564.75
+Elephants:Hay:120000:1105.75
+
+Step 4:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ tr -s ".""" < zoo2
+Monkeys:Bananas:2000:850.00
+Lions:Raw Meat:4000:1245.50
+Camels:Vegetables:2300:564.75
+Elephants:Hay:120000:1105.75
+
+Project 5-11
+
+Step 1:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ pr -h "UNIX Files & Databases" < unix_stuff|more
+
+Step 2:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ pr -l 23 -h "UNIX Files & Databases" < unix_stuff
+
+Project 5-12
+
+Step 1:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ emacs programmer
+
+Step 2:
+
+entered text via emacs
+
+Step 3:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ emacs project
+
+
+Project 5-13
+
+Step 1:
+
+pat@patMintPC:/media/pat/c523e935-4bde-42c1-92f0-6beb56c63b53/pat/UnixClassWork$ awk -F: '{printf "%d %-12.12s &-10.10s\n", $1, $2, $3}'
+programmer
+0              &-10.10s
+
+0              &-10.10s
+
+0              &-10.10s
+
+0              &-10.10s
