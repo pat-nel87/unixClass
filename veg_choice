@@ -1,0 +1,13 @@
+echo - "What is your favorite vegetable? "
+read veg_name
+if [ "$veg_name" ="broccoli" ]
+then
+   echo "Broccoli! wooo!"
+else
+   if ["$veg_name" = "carrots" ]
+   then
+    echo "Carrots are great"
+     else
+    echo "Dont forget Broccoli"
+  fi
+fi
